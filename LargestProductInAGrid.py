@@ -26,7 +26,7 @@ def get(arr, y, x):
         return array[y][x]
     return 0
 
-def maximum (a, b):
+def maximum(a, b):
     if a >= b:
         return a
     else:
