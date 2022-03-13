@@ -1,0 +1,27 @@
+Numbers 1-9
+
+3+3+5+4+4+3+5+5+4 = 36
+
+Numbers 10-19
+3+6+6+8+8+7+7+9+8+8=70
+
+Numbers 20-99
+
+10*(6+6+5+5+5+7+6+6)+8*36=748
+
+Numbers 1-99
+
+36+70+748=854
+
+Numbers 100-99
+
+1-9 happen 100 times each == 36*100=3600
+1-99 happen 9 times == 9*854= 7686
+"hundred" happens 9 times == 7*9=63
+"hundred and" happens 999 times == 999*10 = 8910
+
+3600+7686+63+8910=20259
+
+Numbers 1-1000
+
+854+20259+11(one thousand)=21124
