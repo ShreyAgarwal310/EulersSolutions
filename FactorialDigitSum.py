@@ -1,6 +1,3 @@
-from cv2 import FarnebackOpticalFlow_create
-
-
 num = 100
 factorial = 1
 
