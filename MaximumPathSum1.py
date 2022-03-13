@@ -16,21 +16,17 @@ pyramid = '''75
 
 number = pyramid.strip().split('\n')
 
-print(number)
-
 for i in range(1, len(number)):
     number[i] = number[i].strip().split(' ')
     number[i] = [int(x) for x in number[i]]
-
-print(number)
 
 number[0] = [75]
 
 counter = 0
 
-for i in range(len(number)-2,-1,-1):
+for i in range(len(number) - 2, -1, -1):
 	for j in range(len(number[i])):
-		number[i][j] = number[i][j] + max(number[i+1][j], number[i+1][j+1])
+		number[i][j] = number[i][j] + max(number[i + 1][j], number[i + 1][j + 1])
 		counter += 1
 	number.pop()
 
