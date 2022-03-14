@@ -1,4 +1,4 @@
-f = open(".txt",'r')
+f = open("NamesScores.txt",'r')
 namesList = sorted(f.read().replace('"','').split(','), key = str)
 
 letterValues = {
