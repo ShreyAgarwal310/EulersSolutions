@@ -1,7 +1,1 @@
-sum = 0
-
-for i in range(2, 5 * 9 ** 5 + 1):
-	if sum([int(x) ** 5 for x in str(i)]) == i:
-		sum += i
-
-print(sum)
+print(sum([i for i in range(2, 9 ** 5 * 6 + 1) if i == sum([int(j) ** 5 for j in str(i)])]))
