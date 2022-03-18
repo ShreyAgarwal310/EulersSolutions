@@ -33,6 +33,6 @@ for i in primes:
     a = list(set([x for x in a if x in primes]))
     a.sort()
     if(len(a) >= 3):
-        if create(a):
+        if(create(a)):
             print(create(a))
             break
