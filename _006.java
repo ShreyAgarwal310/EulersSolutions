@@ -1,4 +1,4 @@
-public class SumSquareDifference {
+public class _006 {
     public static void main(String[] args)
     {
         int n = 100;

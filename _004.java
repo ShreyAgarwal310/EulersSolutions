@@ -1,7 +1,7 @@
 import java.lang.Math;
 import java.util.Scanner;
  
-class LargestPalindromeProduct
+class _004
 {
     static int largestPalindrome(int n)
     {

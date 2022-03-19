@@ -1,4 +1,4 @@
-public class DigitFactorials
+public class _034
 {
     public static int factorial(int n)
     {

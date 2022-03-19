@@ -1,4 +1,4 @@
-public class SmallestMultiple {
+public class _005 {
     public static void main(String[] args)
     {
         int i = 20;

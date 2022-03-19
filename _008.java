@@ -1,4 +1,4 @@
-public class LargestProductInASeries
+public class _008
 {
     public static void main(String[] args)
     {

@@ -1,4 +1,4 @@
-public class ReciprocalCycles {
+public class _026 {
     public static void main(String[] args)
     {
         int sequenceLength = 0;

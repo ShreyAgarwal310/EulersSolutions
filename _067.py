@@ -1,4 +1,4 @@
-with open('MaximumPathSumII.txt') as file:
+with open('_067.txt') as file:
     pyramid = file.read()
 
 print(pyramid)

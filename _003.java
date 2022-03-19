@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LargestPrimeFactor
+public class _003
 {
     public static void main(String[] args)
     {

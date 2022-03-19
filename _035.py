@@ -3,7 +3,6 @@ def sieve(n):
 	isPrime[0] = False
 	isPrime[1] = False
 	isPrime[2] = True
-	#even numbers except 2 have been eliminated
 	for i in range(3, int(n ** 0.5 + 1), 2):
 		index = i * 2
 		while(index < n):

@@ -1,4 +1,4 @@
-public class EvenFibonacciNumbers
+public class _002
 {
     public static void main(String[] args) 
     {

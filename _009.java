@@ -1,4 +1,4 @@
-public class SpecialPythagoreanTriplet
+public class _009
 {
     public static void main(String[] args)
     {

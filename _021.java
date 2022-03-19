@@ -1,4 +1,4 @@
-public class AmicableNumbers
+public class _021
 {
     private static int sumOfFactors(int number) {
         int sqrtOfNumber = (int) Math.sqrt(number);

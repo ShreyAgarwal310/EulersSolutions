@@ -1,6 +1,6 @@
 from math import sqrt
 
-f = open('CodedTriangleNumbers.txt')
+f = open('042.txt')
 words = f.read()
 f.close
 words = words.strip().split(',')

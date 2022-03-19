@@ -1,4 +1,4 @@
-public class SummationOfPrimes 
+public class _010 
 {
     private static boolean is_prime(long num)
     {

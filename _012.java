@@ -1,4 +1,4 @@
-public class HighlyDivisibleTriangularNumbers
+public class _012
 {
     private static int NumberOfDivisors(int num)
     {
