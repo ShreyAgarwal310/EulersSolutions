@@ -1,55 +1,59 @@
-from collections import Counter
+wildcards = []
+primes = []
+primes.append(2)
+searched = set()
 
-def sieve(n):
-    isPrime = [True] * n
-    isPrime[0] = False
-    isPrime[1] = False
-    isPrime[2] = True
-    for i in range(3, int(n ** 0.5 + 1), 2):
-        index = i * 2
-        while(index < n):
-            isPrime[index] = False
-            index += i
-    prime = [2]
-    for i in range(3, n, 2):
-        if(isPrime[i]):
-            prime.append(i)
-    return prime
+def genWildcardStrings(s, index):
+    if(index > 0 and s not in searched):
+        wildcards.append(s)
+        searched.add(s)
+    for x in range(index, len(s)):
+        genWildcardStrings(createPlaceholder(s, x), x+1)
 
-primes = sieve(1000000)
+def createPlaceholder(s, index):
+    return s[0:index] + '*' + s[index+1:]
 
-primes = [x for x in primes if len(str(x)) - len(set(str(x))) >= 3]
+def binarySearch(prime):
+    start = 0
+    end = len(primes)
+    middle = int((end + start)/2)
+    
+    while(start < end 
+          and primes[middle] != prime 
+          and middle < len(primes)):
+        if(primes[middle] < prime):
+            start = middle+1
+        else:
+            end = middle-1
+        middle = int((end + start)/2)
+    
+    if(middle < len(primes) and primes[middle] == prime):
+        return middle
+    else:
+        return -1
 
-def pdr(n):
-    n = str(n)
-    sol = []
+for x in range(3, 1000000):
+    found = False
+    for i in range(0, len(primes)):
+        if(x % primes[i] == 0):
+            found = True
+            break
+        if(primes[i] * primes[i] > x):
+            break
+    if not found:
+        primes.append(x)
 
-    for dupe in (Counter(n) - Counter(set(n))):
-        a = ['1', '2', '3', '4', '5', '6' '7', '8', '9']
-        temp = [int(n.replace(dupe, x)) for x in a]
-        sol.append(temp)
-
-    return temp
-
-checked = []
-
-def check(l):
-    for i in l:
-        checked.append(i)
-        if(i not in primes):
-            l.remove(i)
-    return l
-
-flag = True
-i = 0
-
-while(flag):
-    if(primes[i] not in checked):
-        replacements = pdr(primes[i])
-        for j in replacements:
-            if(len(check(j)) == 8):
-                print(j[0])
-                flag = False
-                break
-
-    i += 1
+for x in range(0, len(primes)):
+    wildcards = []
+    genWildcardStrings(str(primes[x]), 0)
+    for y in range(1, len(wildcards)):
+        count = 0
+        for z in range(0, 10):
+            num = int(wildcards[y].replace('*', str(z)))
+            if(len(str(num)) < len(wildcards[y])):
+                continue
+            if(binarySearch(num) >= 0):
+                count += 1
+        if count >= 8:
+            print(wildcards[y])
+            exit(0)
