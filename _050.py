@@ -1,4 +1,4 @@
-from usefulFunctions.sieveOfEratosthenes import sieve
+from usefulFunctions import sieve
 
 primes = sieve(1000000)
 length = 0
