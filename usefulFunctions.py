@@ -70,3 +70,11 @@ def sumOfDigits(n):
         n //= 10
     
     return sum
+
+def numDigits(n):
+    count = 0
+    while(n != 0):
+        count += 1
+        n //= 10
+    
+    return count
